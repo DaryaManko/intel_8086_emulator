@@ -79,7 +79,12 @@
             // 
             // startRegisterBox
             // 
+            this.startRegisterBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.startRegisterBox.FormattingEnabled = true;
+            this.startRegisterBox.Items.AddRange(new object[] {
+            "AX",
+            "BX",
+            "CX"});
             this.startRegisterBox.Location = new System.Drawing.Point(213, 60);
             this.startRegisterBox.Name = "startRegisterBox";
             this.startRegisterBox.Size = new System.Drawing.Size(151, 28);
@@ -94,11 +99,14 @@
             this.startRegisterLabel.Size = new System.Drawing.Size(133, 20);
             this.startRegisterLabel.TabIndex = 10;
             this.startRegisterLabel.Text = "rejestr poczatkowy";
-            this.startRegisterLabel.Click += new System.EventHandler(this.label3_Click);
             // 
             // finishRegisterBox
             // 
-            this.finishRegisterBox.FormattingEnabled = true;
+            this.finishRegisterBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.finishRegisterBox.Items.AddRange(new object[] {
+            "AX",
+            "BX",
+            "CX"});
             this.finishRegisterBox.Location = new System.Drawing.Point(408, 60);
             this.finishRegisterBox.Name = "finishRegisterBox";
             this.finishRegisterBox.Size = new System.Drawing.Size(151, 28);
@@ -113,7 +121,6 @@
             this.finishRegisterLabel.Size = new System.Drawing.Size(283, 20);
             this.finishRegisterLabel.TabIndex = 12;
             this.finishRegisterLabel.Text = "rejestr do ktorego chcesz zapisac wartosc";
-            this.finishRegisterLabel.Click += new System.EventHandler(this.label4_Click_1);
             // 
             // mov
             // 
@@ -129,6 +136,7 @@
             // 
             this.value.Location = new System.Drawing.Point(66, 173);
             this.value.Name = "value";
+            this.value.ReadOnly = true;
             this.value.Size = new System.Drawing.Size(125, 27);
             this.value.TabIndex = 14;
             this.value.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -137,6 +145,7 @@
             // 
             this.register.Location = new System.Drawing.Point(197, 173);
             this.register.Name = "register";
+            this.register.ReadOnly = true;
             this.register.Size = new System.Drawing.Size(125, 27);
             this.register.TabIndex = 15;
             this.register.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -170,7 +179,6 @@
             this.Controls.Add(this.result);
             this.Name = "Emulator";
             this.Text = "Emulator";
-            this.Load += new System.EventHandler(this.Emulator_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
